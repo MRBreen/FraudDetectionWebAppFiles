@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+
+  <title>Super Awesome Fraud Predictor!</title>
+  <meta name="description" content="Super Awesome Fraud Predictor">
+  <meta name="author" content="Myko">
+
+    <script type="text/javascript"
+            src="{{ url_for('static', filename='jquery.js') }}">
+    </script>
+    <script type="text/javascript"
+            src="{{ url_for('static', filename='app.js') }}">
+    </script>
+    <link rel="stylesheet" type="text/css"
+          href="{{ url_for('static', filename='css/bootstrap.css') }}">
+
+</head>
+<style>
+table {
+    font-family: arial, sans-serif;
+    font-weight: bold;
+    border-collapse: collapse;
+    width: 100%;
+}
+
+td, th {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+}
+
+tr:nth-child(even) {
+    background-color: #dddddd;
+}
+</style>
+
+<body>
+<div class="container">
+
+    <h1>Welcome to Myko's Super Awesome Fraud Predictor!</h1>
+    <h2>Predict whether an event is fraudulent</h2>
+
+    <div class="row">
+        <p>Get predictions on the 10 most recent posts!</p>
+    </div>
+
+    <div class="row">
+      <div class="form-inline">
+
+        <div class="form-group">
+          <button type="button" id="predict" class="btn-primary">Predict!</button>
+        </div>
+
+      </div>
+    </div>
+
+    <div class="row">
+        <!-- The span has an id so that later we can fill in the solution
+             using js. -->
+        <p> Here are the predictions: <span id="predict"></span> </p>
+    </div>
+    <center>
+    <img src="https://s3-us-west-2.amazonaws.com/ericyatskowitz/Banner_Myko_Engine.png" alt="Myko: Super Dog!" style="float:left;width:1000px;height:500px;">
+    </center>
+
+</div>
+</body>
+</html>
